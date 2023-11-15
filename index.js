@@ -86,3 +86,8 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+// Add initial text design 
+console.log("`".repeat(3) + "text");
+console.log("Financial Analysis");
+console.log("-".repeat(16));
