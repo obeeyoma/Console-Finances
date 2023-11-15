@@ -91,3 +91,16 @@ var finances = [
 console.log("`".repeat(3) + "text");
 console.log("Financial Analysis");
 console.log("-".repeat(16));
+
+// Get the total number of months included in the dataset.
+// Varables to store months and store number of months
+var numOfMonths;  
+var months = [];
+// Count number of months
+for (var i = 0; i < finances.length; i++) {
+    months.push(finances[i][0]);
+}
+// Store number of months
+numOfMonths = months.length
+// Log number of months
+console.log("Total Months: " + numOfMonths)
