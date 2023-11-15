@@ -104,3 +104,11 @@ for (var i = 0; i < finances.length; i++) {
 numOfMonths = months.length
 // Log number of months
 console.log("Total Months: " + numOfMonths)
+
+// Find the total amount of Profit/Losses over the entire period.
+var total = 0;
+
+for (var i = 0; i < finances.length; i++) {
+total += finances[i][1];
+}
+console.log("Total: $" + total);
