@@ -172,3 +172,15 @@ for (var i = 0; i < monthlyChanges.length; i++) {
     console.log("Greatest Increase in Profits/Losses: " + monthlyChanges[i][0] + " " + "("+"$" +  monthlyChanges[i][1]+ ")")
   }
 }
+
+// * The greatest decrease in Profit/Losses (date and amount) over the entire period.
+
+greatestDecrease = Math.min(...changePerMonth);
+
+// Log to console greatest decrease
+for (var i = 0; i < monthlyChanges.length; i++) {
+  if (monthlyChanges[i][1] == greatestDecrease) {
+    console.log("Greatest Decrease in Profits/Losses: " + monthlyChanges[i][0] + " " + "("+"$" +  monthlyChanges[i][1]+ ")")
+  } 
+}
+console.log("`".repeat(3));
