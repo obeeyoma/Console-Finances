@@ -112,3 +112,42 @@ for (var i = 0; i < finances.length; i++) {
 total += finances[i][1];
 }
 console.log("Total: $" + total);
+
+// * The average of the **changes** in Profit/Losses over the entire period.
+ 
+var previousMonthValue = 0;
+var currentMonthValue = 0;
+var result = 0;
+var monthlyChanges = [];
+var total = 0;
+var averageChange = 0;
+
+// Initiaze previousMonth with element at index 0 of dataset
+
+previousMonthValue = finances[0][1];
+
+
+// Get monthly change starting from second element
+
+for (var i = 1; i < finances.length; i++) {
+
+  currentMonthValue = finances[i];
+  result = currentMonthValue[1] - previousMonthValue;
+  monthlyChanges.push([currentMonthValue[0],result]);
+  result = 0;
+  previousMonthValue = currentMonthValue[1];
+}
+
+// // Total change in Profit/Losses from month to month
+
+for (var i = 0; i < monthlyChanges.length; i++) {
+
+  total += monthlyChanges[i][1];
+  
+}
+// Average change
+// (`Total/(Number of months - 1)`)
+averageChange = total / (finances.length - 1);
+averageChange = averageChange.toFixed(2)
+console.log("Average Change: " + averageChange);
+
