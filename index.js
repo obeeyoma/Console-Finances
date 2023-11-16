@@ -138,14 +138,14 @@ for (var i = 1; i < finances.length; i++) {
   previousMonthValue = currentMonthValue[1];
 }
 
-// // Total change in Profit/Losses from month to month
+//Total change in Profit/Losses from month to month
 
 for (var i = 0; i < monthlyChanges.length; i++) {
 
   total += monthlyChanges[i][1];
   
 }
-// Average change
+// Average change in Profits/Loss
 // (`Total/(Number of months - 1)`)
 averageChange = total / (finances.length - 1);
 averageChange = averageChange.toFixed(2)
