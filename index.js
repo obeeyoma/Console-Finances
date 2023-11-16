@@ -127,7 +127,7 @@ var averageChange = 0;
 previousMonthValue = finances[0][1];
 
 
-// Get monthly change starting from second element
+// Get monthly change starting from second element of dataset
 
 for (var i = 1; i < finances.length; i++) {
 
@@ -151,3 +151,24 @@ averageChange = total / (finances.length - 1);
 averageChange = averageChange.toFixed(2)
 console.log("Average Change: " + averageChange);
 
+
+// * The greatest increase in Profit/Losses (date and amount) over the entire period.
+
+var changePerMonth = [];
+var greatestIncrease = 0;
+var greatestDecrease = 0;
+
+
+for (var i = 0; i < monthlyChanges.length; i++){
+  changePerMonth.push(monthlyChanges[i][1]);
+}
+
+greatestIncrease = Math.max(...changePerMonth);
+
+
+// Log to console greatest increase
+for (var i = 0; i < monthlyChanges.length; i++) {
+  if (monthlyChanges[i][1] == greatestIncrease) {
+    console.log("Greatest Increase in Profits/Losses: " + monthlyChanges[i][0] + " " + "("+"$" +  monthlyChanges[i][1]+ ")")
+  }
+}
