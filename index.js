@@ -87,10 +87,8 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// Add initial text design 
-console.log("`".repeat(3) + "text");
 console.log("Financial Analysis");
-console.log("-".repeat(16));
+console.log("-".repeat(28));
 
 // Get the total number of months included in the dataset.
 // Varables to store months and store number of months
@@ -183,4 +181,3 @@ for (var i = 0; i < monthlyChanges.length; i++) {
     console.log("Greatest Decrease in Profits/Losses: " + monthlyChanges[i][0] + " " + "("+"$" +  monthlyChanges[i][1]+ ")")
   } 
 }
-console.log("`".repeat(3));
